@@ -1,16 +1,43 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Pokemon List</title>
-    </head>
-    <body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <title>Pokemon List</title>
+</head>
+
+<body style="background-color:rgb(88, 106, 128)">
+    <div class="text-center">
         <h1>Here's a list of all pokemons</h1>
-        <ul id="pokemons"></ul>
-        <button id="previous">Previous</button>
-        <button id="next">Next</button>
-        <script src="jquery.js"></script>
-        <!--<script src="bootstrap.js"></script>-->
-        <script src="app.js"></script>
-    </body>
+        <h2 id="loading">Loading...</h2>
+    </div>
+    <br>
+    <div class="row justify-content-md-center bg-primary">
+        <div class="col col-lg-2 bg-info">
+            <table id="pokemons"></table>
+            <br>
+            <button id="previous">Previous</button>
+            <button id="next">Next</button>
+        </div>
+        <div class="col-2 bg-info">
+            <table style="height:100%">
+                <tr>
+                    <td>
+                        <ul id="details" style="display:none; list-style-type: none;">
+                            <li id="name"></li>
+                            <li id="picture"></li>
+                            <li id="weight"></li>
+                            <li id="abilities"></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="jquery.js"></script>
+    <script src="app.js"></script>
+</body>
+
 </html>
